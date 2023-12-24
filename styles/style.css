@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Mono&family=Nunito+Sans&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Code&family=Fira+Mono&family=Inter&family=Nunito+Sans&family=Roboto+Mono&display=swap");
+
+:root {
+  --dark-navy: #020c1b;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy: #0a192f;
+  --dark-slate: #495670;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+  --blue: #57cbff;
+
+  --border-radius: 4px;
+  --nav-height: 100px;
+  --nav-scroll-height: 70px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", monospace;
+  background: var(--navy);
+  color: var(--light-slate);
+  scroll-behavior: smooth;
+  /* font-size: 12px; */
+}
+
+header {
+  background-color: var(--navy);
+  box-shadow: 0px 4px 8px var(--dark-navy);
+  color: white;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5em;
+  position: relative;
+  width: fit-content;
+  max-width: fit-content;
+  /* opacity: 0; */
+  animation: fade 1s 0.2s 1 forwards;
+}
+
+.hexagon2 {
+  width: 50px;
+  height: 50px;
+}
+
+.border-anim-none {
+  fill: transparent;
+  stroke: var(--green);
+  stroke-width: 2;
+  stroke-dasharray: 1200 0;
+  position: relative;
+}
+.brand-name {
+  position: absolute !important;
+  color: var(--green);
+  font-size: 85px;
+  animation: fontAnimation 1s 1 ease-out;
+  font-family: "Dancing Script", cursive;
+}
+.brand .name {
+  position: absolute !important;
+  color: var(--green);
+  font-size: 20px;
+  left: 38%;
+  top: 22%;
+  font-family: "Dancing Script", cursive;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.content-section {
+  padding: 50px;
+  /* max-width: 900px; */
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-content {
+  max-width: 900px;
+}
+
+.left-content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.left-content h2.role {
+  font-size: 1.5em;
+  margin: auto;
+}
+
+.left-content p {
+  margin-bottom: 20px;
+}
+.greet {
+  color: var(--green) !important;
+  margin: 1% 0px 0% 0px;
+  padding-left: 3px;
+  /* opacity: 0; */
+  animation: fade 1s 1.6s 1 forwards;
+  transition: all 1s;
+}
+
+.role {
+  color: var(--lightest-slate) !important;
+  margin: 0% 0px 0% 0px;
+  padding-left: 3px;
+  font-size: 56px;
+  width: fit-content;
+  max-width: fit-content;
+  border-right: 3px solid var(--green);
+  /* opacity: 0; */
+  animation: fade 1s 3s 1 forwards, typing 4s infinite steps(30, end),
+    blinking 0.5s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 1s;
+  display: flex;
+}
+
+@keyframes typing {
+  0% {
+    width: 0px;
+  }
+  45% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+@keyframes blinking {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--green);
+  }
+}
+
+.resume-btn,
+.hire-me-btn ,
+.btn {
+  cursor: pointer;
+  padding: 10px 37px 10px 37px;
+  border: 1px solid var(--green) !important;
+  background: transparent !important;
+  color: var(--green) !important;
+  border-radius: 2px;
+  font-size: 12px;
+  /* animation: fade 1s 1s 1 forwards; */
+  transition: all 1s;
+  text-decoration: none;
+  
+}
+
+.resume-btn:hover,
+.hire-me-btn:hover,
+.btn:hover {
+  transition: all 0.3s;
+  box-shadow: 2px 2px 0px var(--green);
+  transform: translate(-2px, -2px);
+}
+
+.right-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.right-content svg {
+  width: 303px;
+}
+#home .name{
+  /* font-size: 100px; */
+  font-size: 3em;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav{
+    padding: 10px 12px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    height: 100vh; /* Full height */
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(23px);
+    /* position: relative; */
+  }
+  .nav-links.show .x-button{
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 7px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    }
+    
+
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  /* Adjust the styles as needed for your brand color */
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ffd700; /* Change to your desired hover color */
+  }
+  #home h1.name{
+    font-size: 2.5rem;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+  }
+  .role{
+    font-size: 2rem;
+  }
+}
+
+.nav-links a.active {
+  color: #ffd700; /* Change the text color for the active link */
+}
+
+/* Add styling for the close button */
+.nav-links .close-btn {
+  display: none;
+  cursor: pointer;
+}
+.nav-links .x-button{
+display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Existing styles */
+  .nav-links .close-btn {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  row-gap: 10px;
+}
+.section-header hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  margin-top: px;
+  border-bottom: 1px solid var(--slate);
+}
+.section-header h2 {
+  text-wrap: nowrap;
+  margin: 0;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.content-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 14px;
+}
+.footer p {
+  margin: 0;
+}
+
+.nav-links{
+  transition: all 0.4s;
+}

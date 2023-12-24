@@ -1,0 +1,64 @@
+
+/* for about section */
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    /* margin-bottom: 20px; */
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content li {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+
+.skill-list-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .skill-list-container li{
+    height: 150px;
+      width: 150px;
+      /* background: red; */
+      font-size: 100px;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgb(112, 100, 100);
+      border-radius: 4px;
+      transition:all  0.3s;
+
+  }
+  .skill-list-container li:hover{
+    border: 1px solid var(--blue);
+    background:var(--blue);
+    /* background-blend-mode: overlay; */
+    /* opacity: 0.7; */
+  }
+
+
+  @media only screen and (max-width: 768px){
+    .skill-list-container li{
+        height: 100px;
+        width: 100px;
+        font-size: 50px;
+    }
+  }

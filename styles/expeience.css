@@ -1,0 +1,29 @@
+.experience {
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 16px;
+    padding: 24px;
+  }
+
+  .experience h2 {
+    color: #3498db;
+  }
+
+  .experience-title {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+
+  .experience-company {
+    font-weight: bold;
+  }
+
+  .experience-date {
+    color: #666;
+  }
+
+  .experience-description {
+    margin-top: 16px;
+  }
