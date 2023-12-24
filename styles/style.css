@@ -362,3 +362,6 @@ display: none;
 .nav-links{
   transition: all 0.4s;
 }
+.disabled{
+  cursor: not-allowed;
+}
