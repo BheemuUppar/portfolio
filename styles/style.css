@@ -200,7 +200,7 @@ nav {
 }
 
 .resume-btn,
-.hire-me-btn ,
+.hire-me-btn,
 .btn {
   cursor: pointer;
   padding: 10px 37px 10px 37px;
@@ -212,7 +212,6 @@ nav {
   /* animation: fade 1s 1s 1 forwards; */
   transition: all 1s;
   text-decoration: none;
-  
 }
 
 .resume-btn:hover,
@@ -231,14 +230,14 @@ nav {
 .right-content svg {
   width: 303px;
 }
-#home .name{
+#home .name {
   /* font-size: 100px; */
   font-size: 3em;
   margin-top: 10px;
 }
 
 @media only screen and (max-width: 768px) {
-  nav{
+  nav {
     padding: 10px 12px;
   }
   .nav-links {
@@ -262,7 +261,7 @@ nav {
     backdrop-filter: blur(23px);
     /* position: relative; */
   }
-  .nav-links.show .x-button{
+  .nav-links.show .x-button {
     display: block;
     position: absolute;
     top: 22px;
@@ -272,8 +271,7 @@ nav {
     border: none;
     font-size: 30px;
     cursor: pointer;
-    }
-    
+  }
 
   .burger-menu {
     display: block;
@@ -296,12 +294,12 @@ nav {
   .nav-links a:hover {
     color: #ffd700; /* Change to your desired hover color */
   }
-  #home h1.name{
+  #home h1.name {
     font-size: 2.5rem;
     text-overflow: ellipsis;
     text-wrap: nowrap;
   }
-  .role{
+  .role {
     font-size: 2rem;
   }
 }
@@ -315,8 +313,8 @@ nav {
   display: none;
   cursor: pointer;
 }
-.nav-links .x-button{
-display: none;
+.nav-links .x-button {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -359,9 +357,27 @@ display: none;
   margin: 0;
 }
 
-.nav-links{
+.nav-links {
   transition: all 0.4s;
 }
-.disabled{
+.disabled {
   cursor: not-allowed;
 }
+
+.social-links {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+ margin: 10px auto;
+}
+.social-links a{
+  color: var(--lightest-slate) !important;
+}
+.fa-linkedin-in{
+  color: #0a66c2;
+}
+.fa-instagram{
+  color: #E4405F;
+}
+
+
