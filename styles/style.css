@@ -310,7 +310,22 @@ nav {
   }
   .role {
     font-size: 2rem;
+    /* color: var(--lightest-slate) !important;
+    margin: 0% 0px 0% 0px;
+    padding-left: 3px;
+    font-size: 56px;
+    width: fit-content;
+    max-width: fit-content;
+    border-right: 3px solid var(--green);
+    opacity: 0; */
+    animation: fade 1ms 1.2s  forwards, typing 4s infinite steps(30, end),
+      blinking 0.5s infinite, slideUp 0.5s 1.2s;
+    /* white-space: nowrap;
+    overflow: hidden; */
   }
+ 
+  
+
 }
 
 .nav-links a.active {
