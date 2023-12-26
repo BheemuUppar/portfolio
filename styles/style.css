@@ -157,6 +157,14 @@ nav {
   animation: fade 1s 1.6s 1 forwards;
   transition: all 1s;
 }
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .role {
   color: var(--lightest-slate) !important;
@@ -166,11 +174,12 @@ nav {
   width: fit-content;
   max-width: fit-content;
   border-right: 3px solid var(--green);
-  /* opacity: 0; */
-  animation: fade 1s 3s 1 forwards, typing 4s infinite steps(30, end),
-    blinking 0.5s infinite;
+  opacity: 0;
+  animation: fade 1ms 2s  forwards, typing 4s infinite steps(30, end),
+    blinking 0.5s infinite, slideUp 0.5s 2s;
   white-space: nowrap;
   overflow: hidden;
+
   transition: all 1s;
   display: flex;
 }
@@ -365,19 +374,17 @@ nav {
 }
 
 .social-links {
- display: flex;
- justify-content: center;
- gap: 10px;
- margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px auto;
 }
-.social-links a{
+.social-links a {
   color: var(--lightest-slate) !important;
 }
-.fa-linkedin-in{
+.fa-linkedin-in {
   color: #0a66c2;
 }
-.fa-instagram{
-  color: #E4405F;
+.fa-instagram {
+  color: #e4405f;
 }
-
-

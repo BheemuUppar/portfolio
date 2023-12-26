@@ -1,0 +1,104 @@
+
+
+/* Nav Links List Items Animation */
+header .brand{
+    opacity: 0;
+    animation: slideInTop 0.7s ease-in-out forwards;
+}
+.nav-links li {
+    opacity: 0;
+    animation: slideInTop 0.5s ease-in-out forwards;
+}
+
+.greet{
+    opacity: 0;
+    animation: slideUp 0.8s ease-in forwards;
+    animation-delay: 1.4s;
+}
+h1.name{
+    opacity: 0;
+    animation: slideUp 0.7s ease-in-out forwards;
+    animation-delay: 1.6s;
+}
+.home-description{
+    opacity: 0;
+    animation: slideUp 0.5s ease-in-out forwards;
+    animation-delay: 2.1s;
+}
+.resume-btn , .hire-me-btn{
+    opacity: 0;
+    animation: slideUp 2s ease-in-out forwards;
+    animation-delay: 2.1s;
+}
+.social-links a:nth-child(1) {
+    opacity: 0;
+    animation: smallToBig 0.5s ease-in-out forwards;
+    animation-delay: 2.1s;
+} 
+.social-links a:nth-child(2) {
+    opacity: 0;
+    animation: smallToBig 0.5s ease-in-out forwards;
+    animation-delay: 2.2s;
+} 
+.social-links a:nth-child(3) {
+    opacity: 0;
+    animation: smallToBig 0.5s ease-in-out forwards;
+    animation-delay: 2.3s;
+} 
+
+ @keyframes smallToBig {
+    from {
+        transform: scale(0.5, 0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1,1);
+        opacity: 1;
+    }
+}
+
+/* Keyframe Animation */
+@keyframes slideInTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Delay each list item by multiplying the index */
+.nav-links li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.nav-links li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.nav-links li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.nav-links li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.nav-links li:nth-child(5) {
+    animation-delay: 1s;
+}
+.nav-links li:nth-child(6) {
+    animation-delay: 1.2s;
+}
