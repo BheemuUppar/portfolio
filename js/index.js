@@ -1,3 +1,5 @@
+import {skills} from './data.js'
+
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelector('.nav-links');
     const burgerMenu = document.querySelector('.burger-menu');
@@ -101,8 +103,10 @@ function toggleNav() {
     }
 }
 
-close_btn = document.getElementById('x-button');
+let close_btn = document.getElementById('x-button');
 close_btn.addEventListener('click' , ()=>{
     nav_links = document.querySelector('.nav-links');
     nav_links.classList.remove('show')
-})
+});
+
+console.log(obj)
