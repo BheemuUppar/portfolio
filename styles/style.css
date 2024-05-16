@@ -386,3 +386,8 @@ nav {
 .fa-instagram {
   color: #e4405f;
 }
+
+.skill-list img{
+  height: 100px;
+  width: 100px;
+}
