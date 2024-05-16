@@ -12,8 +12,16 @@ export const skills = [
     icon: "./assets/javascript.svg",
   },
   {
-    name: "angular",
+    name: "Angular",
     icon: "./assets/angular.svg",
+  },
+  {
+    name: "React",
+    icon: "./assets/react.svg",
+  },
+  {
+    name: "Tailwind",
+    icon: "./assets/Tailwind_CSS_Logo.svg",
   },
   {
     name: "nodejs",
@@ -41,13 +49,27 @@ export const projects = [
     {
         title:"chess game",
         img:'./assets/chess-game.png',
-        technologies:[ "html5", "CSS3", "Javascript", "Bootstrap", ""],
+        technologies:[ "html5", "CSS3", "Javascript", "Bootstrap"],
         buttons:[
           {  name:"Source",
             link:"https://github.com/BheemuUppar/chess-game-js"
             },
           {  name:"Link",
             link:"https://chess-game-javascript.onrender.com/"
+            },
+
+        ],
+    },
+    {
+        title:"Musify",
+        img:'./assets/musify.png',
+        technologies:[ "Reactjs", "Nodejs", "Zod", "Tailwind css", "MongoDB", "Jwt"],
+        buttons:[
+          {  name:"Source",
+            link:"https://github.com/BheemuUppar/musify"
+            },
+          {  name:"Link",
+            link:"https://musify-khaki.vercel.app/"
             },
 
         ],

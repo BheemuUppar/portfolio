@@ -150,7 +150,7 @@ for(let i=0 ; i<projects.length;i++){
   let technologies = document.createElement('p')
     technologies.innerText = "Technologies Used: ";
     for(let j =0 ; j<projects[i].technologies.length; j++){
-        technologies.innerText = technologies.innerText + " "+ projects[i].technologies[j]
+        technologies.innerText = technologies.innerText + " "+ projects[i].technologies[j]+(j < projects[i].technologies.length-1 ?",":"")
     }
     cardContent.appendChild(title);
     cardContent.appendChild(technologies);
