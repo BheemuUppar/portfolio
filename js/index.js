@@ -110,7 +110,7 @@ function toggleNav() {
 
 let close_btn = document.getElementById("x-button");
 close_btn.addEventListener("click", () => {
-  nav_links = document.querySelector(".nav-links");
+  let nav_links = document.querySelector(".nav-links");
   nav_links.classList.remove("show");
 });
 
@@ -119,59 +119,82 @@ function renderSkills() {
   let ul = document.createElement("ul");
   ul.classList.add("skill-list-container");
   for (let i = 0; i < skills.length; i++) {
-    let li = document.createElement('li');
-    li.classList.add('skill-list');
-    let img  = document.createElement('img');
-    img.setAttribute('src', skills[i].icon);
-    li.appendChild(img)
-    ul.appendChild(li)
+    let li = document.createElement("li");
+    li.classList.add("skill-list");
+    let img = document.createElement("img");
+    img.setAttribute("src", skills[i].icon);
+    li.appendChild(img);
+    ul.appendChild(li);
+  }
+  aboutContent.appendChild(ul);
 }
-aboutContent.appendChild(ul)
-}
-renderSkills()
+renderSkills();
 
+function renderProjects() {
+  let projectCards = document.querySelector(".project-cards");
 
-function renderProjects(){
-let projectCards = document.querySelector('.project-cards');
+  for (let i = 0; i < projects.length; i++) {
+    let card = document.createElement("div");
+    card.classList.add("card");
+    let cardHeader = document.createElement("div");
+    cardHeader.classList.add("card-header");
+    let cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
+    let cardFooter = document.createElement("div");
+    cardFooter.classList.add("card-footer");
 
-for(let i=0 ; i<projects.length;i++){
-  let card =  document.createElement('div');
-  card.classList.add('card');
-  let cardImg = document.createElement('div');
-  cardImg.classList.add('card-image');
-  let img = document.createElement('img');
-  img.setAttribute('src', projects[i].img);
-  cardImg.appendChild(img);
-  card.appendChild(cardImg)
+    let projectTitle = document.createElement("h3");
+    projectTitle.innerText = projects[i].title;
+    cardHeader.appendChild(projectTitle);
+    card.appendChild(cardHeader);
 
-  let cardContent = document.createElement('div')
-  cardContent.classList.add('card-content')
-  let title = document.createElement('h2');
-  let technologies = document.createElement('p')
-    technologies.innerText = "Technologies Used: ";
-    for(let j =0 ; j<projects[i].technologies.length; j++){
-        technologies.innerText = technologies.innerText + " "+ projects[i].technologies[j]+(j < projects[i].technologies.length-1 ?",":"")
+    let projectDescDiv = document.createElement("div");
+    projectDescDiv.classList.add("description");
+    let para = document.createElement("p");
+    para.innerText = projects[i].description;
+    projectDescDiv.appendChild(para);
+    let technologies = document.createElement("div");
+    technologies.classList.add('technologies')
+    for (let j = 0; j < projects[i].technologies.length; j++) {
+      let tech = document.createElement("small");
+      tech.innerText = projects[i].technologies[j];
+      technologies.appendChild(tech);
     }
-    cardContent.appendChild(title);
-    cardContent.appendChild(technologies);
-card.appendChild(cardContent)
-    let cardButtons = document.createElement('div')
-    cardButtons.classList.add('card-buttons')
-    for(let j=0; j<projects[i].buttons.length;j++){
-        // buttons
-        let button =  document.createElement('button')
-        button.classList.add('btn');
-        let btnLink = document.createElement('a')
-        btnLink.href = projects[i].buttons[j].link;
-        btnLink.target='_blank';
-        btnLink.innerText = projects[i].buttons[j].name;
-        button.appendChild(btnLink);
-        cardButtons.appendChild(button)
+
+    cardBody.appendChild(para);
+    cardBody.appendChild(technologies);
+    let cardImg = document.createElement("div");
+    cardImg.classList.add("card-image");
+    let img = document.createElement("img");
+    img.setAttribute("src", projects[i].img);
+    cardImg.appendChild(img);
+    cardBody.appendChild(cardImg);
+
+    card.appendChild(cardBody); // appending card to card
+
+    let cardButtons = document.createElement("div");
+    cardButtons.classList.add("card-buttons");
+    for (let j = 0; j < projects[i].buttons.length; j++) {
+      // buttons
+      let button = document.createElement("button");
+      button.classList.add("btn");
+      // let btnLink = document.createElement("a");
+      // btnLink.href = projects[i].buttons[j].link;
+      // btnLink.target = "_blank";
+      // btnLink.innerText = projects[i].buttons[j].name;
+      button.setAttribute('onClick', goto)
+      button.innerText = projects[i].buttons[j].name;
+      // button.appendChild(btnLink);
+      cardButtons.appendChild(button);
     }
- card.appendChild(cardButtons)
-    projectCards.appendChild(card)
+    cardFooter.appendChild(cardButtons);
+    card.appendChild(cardFooter);
 
+    projectCards.appendChild(card);
+  }
 }
-
+renderProjects();
+let goto = (url)=>{
+  console.log('click')
+window.open(url, '_blank')
 }
-renderProjects()

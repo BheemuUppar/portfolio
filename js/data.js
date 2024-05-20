@@ -49,6 +49,7 @@ export const projects = [
     {
         title:"chess game",
         img:'./assets/chess-game.png',
+        description:"dynamic chess game for two players", 
         technologies:[ "html5", "CSS3", "Javascript", "Bootstrap"],
         buttons:[
           {  name:"Source",
@@ -63,7 +64,8 @@ export const projects = [
     {
         title:"Musify",
         img:'./assets/musify.png',
-        technologies:[ "Reactjs", "Nodejs", "Zod", "Tailwind css", "MongoDB", "Jwt"],
+        description:"a music streaming app with playlist collaboration feature.",
+        technologies:[ "Reactjs", "Nodejs", "Tailwind css", "MongoDB",],
         buttons:[
           {  name:"Source",
             link:"https://github.com/BheemuUppar/musify"
@@ -77,7 +79,8 @@ export const projects = [
     {
         title:"Recipe Management",
         img:'./assets/food recipe.png',
-        technologies:[ "Angular", "Bootstrap", "Nodejs", "Git", "Vercel", "Render"],
+        description:"a recipe management app for searching, saving favorites, and adding personal recipes.",
+        technologies:[ "Angular", "Bootstrap", "Nodejs",],
         buttons:[
             {  name:"Source",
               link:"https://github.com/BheemuUppar/recipe-management-angular/tree/main"
