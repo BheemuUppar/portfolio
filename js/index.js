@@ -5,28 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const burgerMenu = document.querySelector(".burger-menu");
   const header = document.querySelector("header");
 
-  let isIdle = false;
-  let idleTimer;
-
-  const setIdle = () => {
-    if (window.innerWidth > 768) {
-      isIdle = true;
-      header.style.opacity = 0;
-      header.style.transition = "opacity 0.5s ease";
-    }
-  };
-
-  const setActive = () => {
-    isIdle = false;
-    header.style.opacity = 1;
-    header.style.transition = "opacity 0.5s ease";
-    clearTimeout(idleTimer);
-    idleTimer = setTimeout(setIdle, 3000);
-  };
-
-  // Initial setup
-  idleTimer = setTimeout(setIdle, 3000);
-
   // Toggle navigation links on smaller screens
   const toggleNav = () => {
     navLinks.classList.toggle("show");
@@ -63,10 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Adjust navigation links on scroll
   window.addEventListener("scroll", function () {
-    if (!isIdle) {
-      setActive();
-    }
-
     const fromTop =
       window.scrollY + document.querySelector("header").offsetHeight;
 
@@ -85,28 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Handle mousemove to detect user activity
   document.addEventListener("mousemove", function () {
-    if (isIdle) {
-      setActive();
-    }
+   
   });
 });
-
-function toggleNav() {
-  console.log("toggleNav function called");
-  const navLinks = document.querySelector(".nav-links");
-  navLinks.classList.toggle("show");
-
-  const header = document.querySelector("header");
-  header.style.transition = "opacity 0.5s ease";
-
-  if (navLinks.classList.contains("show")) {
-    header.style.opacity = 1;
-  } else {
-    setTimeout(() => {
-      header.style.opacity = 0;
-    }, 300);
-  }
-}
 
 let close_btn = document.getElementById("x-button");
 close_btn.addEventListener("click", () => {
@@ -114,6 +69,7 @@ close_btn.addEventListener("click", () => {
   nav_links.classList.remove("show");
 });
 
+// create skill box and render
 function renderSkills() {
   let aboutContent = document.querySelector(".about-content");
   let ul = document.createElement("ul");
@@ -130,6 +86,11 @@ function renderSkills() {
 }
 renderSkills();
 
+function  goto(url){
+window.open(url, '_blank') // open URl in new Tab
+}
+
+// create project card and render
 function renderProjects() {
   let projectCards = document.querySelector(".project-cards");
 
@@ -178,11 +139,10 @@ function renderProjects() {
       // buttons
       let button = document.createElement("button");
       button.classList.add("btn");
-      // let btnLink = document.createElement("a");
-      // btnLink.href = projects[i].buttons[j].link;
-      // btnLink.target = "_blank";
-      // btnLink.innerText = projects[i].buttons[j].name;
-      button.setAttribute('onClick', goto)
+    
+      button.onclick = function(){
+        goto(projects[i].buttons[j].link)
+      }
       button.innerText = projects[i].buttons[j].name;
       // button.appendChild(btnLink);
       cardButtons.appendChild(button);
@@ -194,7 +154,4 @@ function renderProjects() {
   }
 }
 renderProjects();
-let goto = (url)=>{
-  console.log('click')
-window.open(url, '_blank')
-}
+

@@ -79,6 +79,8 @@ h1.name{
     }
 }
 
+
+
 /* Delay each list item by multiplying the index */
 .nav-links li:nth-child(1) {
     animation-delay: 0.2s;

@@ -49,13 +49,13 @@ export const projects = [
     {
         title:"chess game",
         img:'./assets/chess-game.png',
-        description:"dynamic chess game for two players", 
+        description:"Dynamic chess game for two players", 
         technologies:[ "html5", "CSS3", "Javascript", "Bootstrap"],
         buttons:[
           {  name:"Source",
             link:"https://github.com/BheemuUppar/chess-game-js"
             },
-          {  name:"Link",
+          {  name:"Live",
             link:"https://chess-game-javascript.onrender.com/"
             },
 
@@ -64,13 +64,13 @@ export const projects = [
     {
         title:"Musify",
         img:'./assets/musify.png',
-        description:"a music streaming app with playlist collaboration feature.",
+        description:"Music streaming app with playlist collaboration feature.",
         technologies:[ "Reactjs", "Nodejs", "Tailwind css", "MongoDB",],
         buttons:[
           {  name:"Source",
             link:"https://github.com/BheemuUppar/musify"
             },
-          {  name:"Link",
+          {  name:"Live",
             link:"https://musify-khaki.vercel.app/"
             },
 
@@ -79,13 +79,13 @@ export const projects = [
     {
         title:"Recipe Management",
         img:'./assets/food recipe.png',
-        description:"a recipe management app for searching, saving favorites, and adding personal recipes.",
+        description:"Recipe management app for searching, saving favorites, and adding personal recipes.",
         technologies:[ "Angular", "Bootstrap", "Nodejs",],
         buttons:[
             {  name:"Source",
               link:"https://github.com/BheemuUppar/recipe-management-angular/tree/main"
               },
-            {  name:"Link",
+            {  name:"Live",
               link:"https://recipe-management-psi.vercel.app/home"
               },
   
