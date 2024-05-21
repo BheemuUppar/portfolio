@@ -1,47 +1,47 @@
 export const skills = [
   {
     name: "html",
-    icon: "./assets/html.svg",
+    icon: "./assets/icons/html.svg",
   },
   {
     name: "css",
-    icon: "./assets/css.svg",
+    icon: "./assets/icons/css.svg",
   },
   {
     name: "javascript",
-    icon: "./assets/javascript.svg",
+    icon: "./assets/icons/javascript.svg",
   },
   {
     name: "Angular",
-    icon: "./assets/angular.svg",
+    icon: "./assets/icons/angular.svg",
   },
   {
     name: "React",
-    icon: "./assets/react.svg",
+    icon: "./assets/icons/react.svg",
   },
   {
     name: "Tailwind",
-    icon: "./assets/Tailwind_CSS_Logo.svg",
+    icon: "./assets/icons/Tailwind_CSS_Logo.svg",
   },
   {
     name: "nodejs",
-    icon: "./assets/nodejs.svg",
+    icon: "./assets/icons/nodejs.svg",
   },
   {
     name: "java",
-    icon: "./assets/java-icon.svg",
+    icon: "./assets/icons/java-icon.svg",
   },
   {
     name: "mongodb",
-    icon: "./assets/mongo.svg",
+    icon: "./assets/icons/mongo.svg",
   },
   {
     name: "mysql",
-    icon: "./assets/mysql.svg",
+    icon: "./assets/icons/mysql.svg",
   },
   {
     name: "git",
-    icon: "./assets/git.svg",
+    icon: "./assets/icons/git.svg",
   },
 ];
 
