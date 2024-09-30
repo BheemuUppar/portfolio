@@ -46,49 +46,66 @@ export const skills = [
 ];
 
 export const projects = [
-    {
-        title:"chess game",
-        img:'./assets/chess-game.png',
-        description:"Dynamic chess game for two players", 
-        technologies:[ "html5", "CSS3", "Javascript", "Bootstrap"],
-        buttons:[
-          {  name:"Source",
-            link:"https://github.com/BheemuUppar/chess-game-js"
-            },
-          {  name:"Live",
-            link:"https://chess-game-javascript.onrender.com/"
-            },
+  {
+    title: "Chat Application",
+    img: "./assets/chat-ui.png",
+    description:
+      "Developed Real-time chat app with one-on-one messaging, group chat functionality, media sharing (photos,videos, documents), and planned audio/video call features.",
+    technologies: ["Angular", "Nodejs", "Express", "PL/SQL", "socket.io"],
+    buttons: [
+      { name: "Frontend code", link: "https://github.com/BheemuUppar/chat-application-client" },
+      { name: "Backend code", link: "https://github.com/BheemuUppar/chat-application-client" },
+    ],
+  },
+  {
+    title: "Musify",
+    img: "./assets/musify.png",
+    description:
+      "Music streaming platform with login, search, music playback, playlist creation (private & public),collaboration features.",
+    technologies: ["Reactjs", "Nodejs", "Tailwind css", "MongoDB"],
+    buttons: [
+      { name: "Source", link: "https://github.com/BheemuUppar/musify" },
+      { name: "Live", link: "https://musify-khaki.vercel.app/" },
+    ],
+  },
+  {
+    title: "Electric Bike Landing page",
+    img: "./assets/rhyno.png",
+    description:
+      "E-commerce landing page with interactive UI and Razor pay payment gateway integration",
+    technologies: ["Reactjs", "Tailwind css", "Razorpay"],
+    buttons: [
+      {
+        name: "Source",
+        link: "https://github.com/BheemuUppar/Electric-Bike-landing-page",
+      },
+      { name: "Live", link: "https://electric-bike-landing-page.vercel.app/" },
+    ],
+  },
+  {
+    title: "chess game",
+    img: "./assets/chess-game.png",
+    description:
+      "Developed two-player chess game with turn indicators and possible move suggestions",
+    technologies: ["html5", "CSS3", "Javascript", "Bootstrap"],
+    buttons: [
+      { name: "Source", link: "https://github.com/BheemuUppar/chess-game-js" },
+      { name: "Live", link: "https://chess-game-javascript.onrender.com/" },
+    ],
+  },
 
-        ],
-    },
-    {
-        title:"Musify",
-        img:'./assets/musify.png',
-        description:"Music streaming app with playlist collaboration feature.",
-        technologies:[ "Reactjs", "Nodejs", "Tailwind css", "MongoDB",],
-        buttons:[
-          {  name:"Source",
-            link:"https://github.com/BheemuUppar/musify"
-            },
-          {  name:"Live",
-            link:"https://musify-khaki.vercel.app/"
-            },
-
-        ],
-    },
-    {
-        title:"Recipe Management",
-        img:'./assets/food recipe.png',
-        description:"Recipe management app for searching, saving favorites, and adding personal recipes.",
-        technologies:[ "Angular", "Bootstrap", "Nodejs",],
-        buttons:[
-            {  name:"Source",
-              link:"https://github.com/BheemuUppar/recipe-management-angular/tree/main"
-              },
-            {  name:"Live",
-              link:"https://recipe-management-psi.vercel.app/home"
-              },
-  
-          ],
-    },
+  {
+    title: "Recipe Management",
+    img: "./assets/food recipe.png",
+    description:
+      " Recipe search platform with user authentication, favorites list, and integration with Spoonacular API ",
+    technologies: ["Angular", "Bootstrap", "Nodejs"],
+    buttons: [
+      {
+        name: "Source",
+        link: "https://github.com/BheemuUppar/recipe-management-angular/tree/main",
+      },
+      { name: "Live", link: "https://recipe-management-psi.vercel.app/home" },
+    ],
+  },
 ];

@@ -86,72 +86,67 @@ function renderSkills() {
 }
 renderSkills();
 
-function  goto(url){
-window.open(url, '_blank') // open URl in new Tab
-}
+
 
 // create project card and render
+
+
 function renderProjects() {
-  let projectCards = document.querySelector(".project-cards");
+  const projectCardsContainer = document.getElementById("project-cards");
+  projects.forEach((project) => {
+      // Create project card
+      const projectCard = document.createElement("div");
+      projectCard.classList.add("project-card");
 
-  for (let i = 0; i < projects.length; i++) {
-    let card = document.createElement("div");
-    card.classList.add("card");
-    let cardHeader = document.createElement("div");
-    cardHeader.classList.add("card-header");
-    let cardBody = document.createElement("div");
-    cardBody.classList.add("card-body");
-    let cardFooter = document.createElement("div");
-    cardFooter.classList.add("card-footer");
+      // Add project image
+      const projectImage = document.createElement("img");
+      projectImage.src = project.img;
+      projectImage.alt = project.title;
+      projectCard.appendChild(projectImage);
 
-    let projectTitle = document.createElement("h3");
-    projectTitle.innerText = projects[i].title;
-    cardHeader.appendChild(projectTitle);
-    card.appendChild(cardHeader);
+      // Create project content div
+      const projectContent = document.createElement("div");
+      projectContent.classList.add("project-content");
 
-    let projectDescDiv = document.createElement("div");
-    projectDescDiv.classList.add("description");
-    let para = document.createElement("p");
-    para.innerText = projects[i].description;
-    projectDescDiv.appendChild(para);
-    let technologies = document.createElement("div");
-    technologies.classList.add('technologies')
-    for (let j = 0; j < projects[i].technologies.length; j++) {
-      let tech = document.createElement("small");
-      tech.innerText = projects[i].technologies[j];
-      technologies.appendChild(tech);
-    }
+      // Add project title
+      const projectTitle = document.createElement("h3");
+      projectTitle.classList.add("project-title");
+      projectTitle.textContent = project.title;
+      projectContent.appendChild(projectTitle);
 
-    cardBody.appendChild(para);
-    cardBody.appendChild(technologies);
-    let cardImg = document.createElement("div");
-    cardImg.classList.add("card-image");
-    let img = document.createElement("img");
-    img.setAttribute("src", projects[i].img);
-    cardImg.appendChild(img);
-    cardBody.appendChild(cardImg);
+      // Add project description
+      const projectDescription = document.createElement("p");
+      projectDescription.classList.add("project-description");
+      projectDescription.textContent = project.description;
+      projectContent.appendChild(projectDescription);
 
-    card.appendChild(cardBody); // appending card to card
+      // Add project technologies
+      const projectTechnologies = document.createElement("p");
+      projectTechnologies.classList.add("project-technologies");
+      projectTechnologies.textContent = `Technologies: ${project.technologies.join(", ")}`;
+      projectContent.appendChild(projectTechnologies);
 
-    let cardButtons = document.createElement("div");
-    cardButtons.classList.add("card-buttons");
-    for (let j = 0; j < projects[i].buttons.length; j++) {
-      // buttons
-      let button = document.createElement("button");
-      button.classList.add("btn");
-    
-      button.onclick = function(){
-        goto(projects[i].buttons[j].link)
-      }
-      button.innerText = projects[i].buttons[j].name;
-      // button.appendChild(btnLink);
-      cardButtons.appendChild(button);
-    }
-    cardFooter.appendChild(cardButtons);
-    card.appendChild(cardFooter);
+      // Add buttons
+      let buttonGroup = document.createElement('div');
+      buttonGroup.classList.add("button-group")
+      project.buttons.forEach((button) => {
+          const projectLink = document.createElement("a");
+          projectLink.classList.add("btn");
+          projectLink.href = button.link;
+          projectLink.textContent = button.name;
+          projectLink.target = "_blank"; // Open in new tab
+          buttonGroup.appendChild(projectLink);
+      });
+      projectContent.appendChild(buttonGroup)
 
-    projectCards.appendChild(card);
-  }
+      // Append project content to project card
+      projectCard.appendChild(projectContent);
+
+      // Append project card to project cards container
+      projectCardsContainer.appendChild(projectCard);
+  });
 }
+
+
 renderProjects();
 

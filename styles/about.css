@@ -32,6 +32,9 @@
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 534px;
+    /* justify-content: center; */
+    margin: auto;
   }
   .skill-list-container li{
     height: 100px;
