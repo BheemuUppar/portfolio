@@ -228,6 +228,13 @@ nav {
   transform: translate(-2px, -2px);
 }
 
+#project-cards .btn{
+  padding: 7px !important;
+}
+#project-cards .button-group{
+ float: right;
+}
+
 .right-content img {
   max-width: 100%;
   height: auto;
