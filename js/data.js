@@ -47,6 +47,18 @@ export const skills = [
 
 export const projects = [
   {
+    title: "Code Lens – AI-Powered Code Analysis Tool",
+    img: "./assets/codelens.png",
+    description:
+      "An AI-driven application that analyzes source code from zip files or GitHub URLs using Google’s Gemini model, generating structured insights for quality, maintainability, and documentation.",
+    technologies: ["Angular", "Nodejs", "Express", "Gemini AI Model", "socket.io"],
+    buttons: [
+      { name: "Frontend code", link: "https://github.com/BheemuUppar/Codelens.git" },
+      { name: "Backend code", link: "https://github.com/BheemuUppar/Code-Analyser-Backend.git" },
+      { name: "Live", link: "https://code-analyzer-frontend.onrender.com/" },
+    ],
+  },
+  {
     title: "Chat Application",
     img: "./assets/chat-ui.png",
     description:
